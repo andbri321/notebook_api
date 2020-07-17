@@ -18,7 +18,7 @@ class ContactsController < ApplicationController
     @contact = Contact.new(contact_params)
 
     if @contact.save
-      render json: @contact, include: [:kind,:phones,:address], status: :created, location: @contact
+      render json: @contact, include: [:kind], status: :created, location: @contact
     else
       render json: @contact.errors, status: :unprocessable_entity
     end
