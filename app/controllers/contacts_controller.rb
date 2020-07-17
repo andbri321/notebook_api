@@ -10,7 +10,7 @@ class ContactsController < ApplicationController
 
   # GET /contacts/1
   def show
-    render json: @contact, include: [:kind,:phones,:address], root: true
+    render json: @contact, include: [:kind]#, meta: {author: 'Anderson'}
   end
 
   # POST /contacts
@@ -27,7 +27,7 @@ class ContactsController < ApplicationController
   # PATCH/PUT /contacts/1
   def update
     if @contact.update(contact_params)
-      render json: @contact, include: [:kind,:phones,:address]
+      render json: @contact, include: [:kind]
     else
       render json: @contact.errors, status: :unprocessable_entity
     end
