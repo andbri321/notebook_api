@@ -23,3 +23,6 @@ Things you may want to cover:
 
 * ...
 # notebook_api
+
+Creating, Updating and Deleting Resources
+https://jsonapi.org/format/#crud
