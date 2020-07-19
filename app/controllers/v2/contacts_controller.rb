@@ -4,7 +4,7 @@ module V2
 
     # GET /contacts
     def index
-      @contacts = Contact.last(5)
+      @contacts = Contact.all
 
       render json: @contacts
     end
