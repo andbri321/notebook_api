@@ -1,4 +1,8 @@
 class Contact < ApplicationRecord
+    
+    # kaminari
+    paginates_per(10)
+
     belongs_to :kind, optional: true
     has_many :phones
     has_one :address
