@@ -9,6 +9,10 @@ end
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.1'
 gem 'rack-cors'
+gem 'jwt'
+gem 'devise_token_auth'
+gem 'devise-i18n'
+
 # https://github.com/rails-api/active_model_serializers/tree/0-10-stable
 gem "active_model_serializers", "~> 0.10.0"
 
