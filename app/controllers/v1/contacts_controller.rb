@@ -9,8 +9,11 @@ module V1
       # per_page = params[:page][:size]
       # @contacts = Contact.all.page(page_number).per(per_page)
       @contacts = Contact.all
-
-      render json: @contacts#, include: [:kind, :address, :phones]
+      
+      # expires_in 30.seconds, public: true
+      if stale?(etag: @contacts)
+        render json: @contacts #, include: [:kind, :address, :phones]
+      end
     end
 
     # GET /contacts/1
