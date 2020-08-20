@@ -30,6 +30,5 @@ describe V1::ContactsController, type: :controller do
         expect(response_body.fetch('data').fetch('id')).to eq(contact.id.to_s)
         expect(response_body.fetch('data').fetch('type')).to eq('contacts')
         expect(response_body.json('data > attributes > name')).to eq(contact.name)
-
     end
 end
